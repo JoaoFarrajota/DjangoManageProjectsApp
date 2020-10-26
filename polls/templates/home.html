@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>home page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand">
+            <i></i>
+        </a>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#modal_login">Login<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              </svg></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#modal_signin">Sign Up <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-receipt-cutoff" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v13h-1V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51L2 2.118V15H1V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zM0 15.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                <path fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-8a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+              </svg></a>
+            </li>
+          </ul>
+    </nav>
+
+    <!-- Modal para o login-->
+    <div id="modal_login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Log in</h3>
+                </div>
+                <div class="modal-body">
+                <form action="" method="post">
+                    <input name="username" type="text" class="form-control" id="email" placeholder="Username/Email" required><br>
+                    <input name="pass" type="password" class="form-control" id="pwd" placeholder="Password" required><br>
+                    <input type="submit" class="btn btn-primary play" value='Login' name='Login'></input>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para o signin-->
+    <div id="modal_signin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Registar novo user</h3>
+                </div>
+                <div class="modal-body">
+                    <input name="name" type="text" class="form-control" id="registername" placeholder="Primeiro e Ultimo nome" required><br>
+                    <input name="email" type="text" class="form-control" id="registeremail" placeholder="Email" required><br>
+                    <input name="user" type="text" class="form-control" id="registeruser" placeholder="Username" required><br>
+                    <input name="pass" type="password" class="form-control" id="registerpwd" placeholder="Password" required><br>
+                    <button onclick='createAccount()' type="submit" class="btn btn-primary play">Enviar</button>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5 titulos">My Projects App</h1><br>
+        </div>
+        </div>
+    </div>
+
+    <div class="container carousel">
+        <div class="row">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div style='height:350px; width:650px; background: url(https://i.imgur.com/waAroRB.jpg);background-repeat: no-repeat;background-size: cover;'></div>
+                </div>
+                <div class="carousel-item">
+                    <div style='height:350px; width:650px; background: url(https://i.imgur.com/8VvNZlU.jpg);background-repeat: no-repeat;background-size: cover;'></div>
+                </div>
+                <div class="carousel-item">
+                    <div style='height:350px; width:650px; background: url(https://i.imgur.com/HVsOHHr.jpg);background-repeat: no-repeat;background-size: cover;'></div>
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <br><br><br><br>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+      <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            <h5>2020 &copy; Planeamento e Gestão de Projeto | Group 07</h5>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+    </footer>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function createAccount(){
+
+    $.post("/createAccount/",
+    {
+      Username: $('#registeruser').val(),
+      Nome: $('#registername').val(),
+      email: $('#registeremail').val(),
+      password: $('#registerpwd').val()
+    },
+    function(data, status){
+        location.reload();
+    });
+
+}
+</script>
